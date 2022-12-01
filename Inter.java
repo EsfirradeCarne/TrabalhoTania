@@ -10,30 +10,30 @@ package InvTania;
  */
 public class Inter {
     
-     static long fibo(int n) {
-        int F = 0;     // atual
-        int ant = 0;   // anterior
+     static long f(int n) {
+        int act = 0;     
+        int ant = 0;   
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n; i++) {    F = act
 
             if (i == 1) {
-                F = 1;
+                act = 1;
                 ant = 0;
             } else {
-                F += ant;
-                ant = F - ant;
+                act += ant;
+                ant = act - ant;
             }
 
         }
 
-        return F;
+        return act;
     }
 
     public static void main(String[] args) {
 
-	// teste do programa. Imprime os 30 primeiros termos
+	
         for (int i = 0; i < 30; i++) {
-            System.out.print("(" + i + "):" + Inter.fibo(i) + "\t");
+            System.out.print("(" + i + "):" + Inter.f(i) + "\t");
         }
 
     }
