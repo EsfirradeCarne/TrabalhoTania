@@ -10,19 +10,19 @@ package InvTania;
  */
 public class Recursivo {
     
-     static long fibo(int n) {
+     static long f(int n) {
         if (n < 2) {
             return n;
         } else {
-            return fibo(n - 1) + fibo(n - 2);
+            return f(n - 1) + f(n - 2);
         }
     }
 
     public static void main(String[] args) {
 
-	// teste do programa. Imprime os 30 primeiros termos
-	for (int i = 0; i < 30; i++) {
-            System.out.print("(" + i + "):" + Recursivo.fibo(i) + "\t");
+	
+	for (int i = 0; i < 20; i++) {
+            System.out.print("(" + i + "):" + Recursivo.f(i) + "\t");
         }
 
     }
